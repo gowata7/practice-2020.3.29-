@@ -1,0 +1,7 @@
+age = "23"
+print(age)
+print(type(age))
+
+n_age = int(age)
+print(n_age)
+print(type(n_age))
