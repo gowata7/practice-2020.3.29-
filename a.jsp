@@ -3,3 +3,4 @@
 <form action="b.jsp">
 	<input type="submit" value="제출">
 </form>
+update
