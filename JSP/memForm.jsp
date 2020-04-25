@@ -1,19 +1,42 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
-<h1>회원등록(Form)</h1>
+
 <form action="memProc.jsp">
-	아이디 : <input type="text" name="uID"><br>
-	비밀번호 : <input type="password" name="pwd"><br>
-	성별 : <input type="radio" name="sex" value="man" checked>남
-		  <input type="radio" name="sex" value="woman">여<br>
-	학과 : <select name="department">
-			<option value="computer">컴공과</option>
-			<option value="security" selected>보안과</option>
-			<option value="animal">애동과</option>
-		 </select><br>
-	취미 : <input type="checkbox" name="hobby" value="soccer">축구
-		 <input type="checkbox" name="hobby" value="basketball">농구
-		 <input type="checkbox" name="hobby" value="baseball">야구<br>
-	<input type="submit" value="등록">
-	<input type="reset" value="재작성">
+<table border=1>
+	<tr>
+		<td>UserID</td>
+		<td><input type="text" name="id"></td>
+	</tr>
+	<tr>
+		<td>UserPW</td>
+		<td><input type="password" name="pwd"></td>
+	</tr>
+	<tr>
+		<td>Gender</td>
+		<td><input type="radio" name="sex" value="male">��
+			<input type="radio" name="sex" value="female">��</td>
+	</tr>
+	<tr>
+		<td>Department</td>
+		<td>
+			<select name="department">
+				<option value="security" selected>���Ȱ�</option>
+				<option value="animal">�ֵ���</option>
+				<option value="computer">�İ���</option>
+			</select><br>
+		</td>
+	</tr>
+	<tr>
+		<td>Hobby</td>
+		<td>
+		<input type="checkbox" name="hobby" value="baseball">baseball
+		<input type="checkbox" name="hobby" value="basketball">basketball
+		<input type="checkbox" name="hobby" value="soccer">soccer
+		<br>
+		</td>
+	</tr>
+	<tr align="center">
+		<td colspan=2><input type="submit" value="����"> <input type="reset" value="�ʱ�ȭ"></td>
+	</tr>
+</table>
 </form>

@@ -1,20 +1,24 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <%
-	String id = request.getParameter("uID");
-	String pw = request.getParameter("pwd");
-	String sex = request.getParameter("sex");
-	String dep = request.getParameter("department");
-	// String hb = request.getParameter("hobby");
-	String [] arrHobby = request.getParameterValues("hobby");
-	String hb = "";
-	for(int i=0; i<arrHobby.length; i++){
-		hb += arrHobby[i] + " ";
+	request.setCharacterEncoding("utf-8");
+	String ID = request.getParameter("id");
+	String PWD = request.getParameter("pwd");
+	String SEX = request.getParameter("sex");
+	String DEP = request.getParameter("department");
+	String Hobby[] = request.getParameterValues("hobby");	
+	String str = "";
+	
+	for(int i=0; i<Hobby.length; i++){
+		str += Hobby[i] + " ";
 	}
 %>
+ID : <%=ID%><br>
+PW : <%=PWD%><br>
+SEX : <%=SEX%><br>
+DEP : <%=DEP%><br>
+Hobby : <%=str%><br>
 
-ID : <%=id%><br>
-PW : <%=pw%><br>
-Sex : <%=sex%><br>
-Department : <%=dep%><br>
-Hobby : <%=hb%>
+<%
+	response.sendRedirect("memRegOk.jsp?id="+ID);
+%>
